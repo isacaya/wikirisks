@@ -7,5 +7,5 @@
 
 ### self-DoS can be escalated into an attack targeting multiple users by chaining it with cache poisoning.
 
-- Blocking access via redirects to invalid addresses
+- Denial of service via cache poisoning
   - Hackerone report, [Denial of service via cache poisoning](https://hackerone.com/reports/409370)

