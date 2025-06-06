@@ -4,4 +4,4 @@
 
 ## Contributing
 
-**WikiRisks** is an open-source project. If you’re interested in contributing, please refer to the CONTRIBUTING.md file for guidelines on how to get started. Your insights are valuable to the project!
+**WikiRisks** is an open-source project. If you’re interested in contributing, please refer to the [CONTRIBUTING.md](https://github.com/isacaya/wikirisks/blob/main/CONTRIBUTING.md) file for guidelines on how to get started. Your insights are valuable to the project!
