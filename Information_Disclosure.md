@@ -17,6 +17,9 @@
 - Username and password exposed on GitHub
   - Hackerone report, [Leaked JFrog Artifactory username and password exposed on GitHub](https://hackerone.com/reports/911606)
 
+- Cross-domain referer leakage
+  - Hackerone report, [Password reset token leakage via referer](https://hackerone.com/reports/342693)
+
 ## Sensitive Data in Error Messages
 
 ### Detailed error messages may expose sensitive information.
