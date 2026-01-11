@@ -10,18 +10,18 @@
 ### A query that retrieves a large amount of data can cause a denial of service by putting a heavy load on the database.
 
 - Abusing search/filter functionality
-  1. Query that filters large table by id
-    ```sql
-    SELECT * FROM large_table WHERE id = {user_input};
-    ```
-  2. Standard query
-    ```sql
-    SELECT * FROM large_table WHERE id = 1;
-    ```
-  2. Manipulated query
-    ```sql
-    SELECT * FROM large_table WHERE id = 1 or 1 = 1;
-    ```
+    1. Query that filters large table by id
+        ```sql
+        SELECT * FROM large_table WHERE id = {user_input};
+        ```
+    2. Standard query
+        ```sql
+        SELECT * FROM large_table WHERE id = 1;
+        ```
+    3. Manipulated query
+        ```sql
+        SELECT * FROM large_table WHERE id = 1 or 1 = 1;
+        ```
 
 ## Account Lockout
 
@@ -49,4 +49,4 @@
 ### Cache poisoning can turn self-targeted vulnerabilities into attacks that affect multiple users.
 
 - Denial of service via cache poisoning
-  - Hackerone report, [Denial of service via cache poisoning](https://hackerone.com/reports/409370)
+    - Hackerone report, [Denial of service via cache poisoning](https://hackerone.com/reports/409370)
