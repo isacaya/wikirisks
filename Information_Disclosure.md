@@ -20,6 +20,11 @@
 - Cross-domain referer leakage
     - Hackerone report, [Password reset token leakage via referer](https://hackerone.com/reports/342693)
 
+- Exposure in Version Control History
+    ```bash
+    git show a1b2c3
+    ```
+
 ## Sensitive Data in Error Messages
 
 ### Detailed error messages may expose sensitive information.
