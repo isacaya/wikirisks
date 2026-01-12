@@ -75,7 +75,7 @@
 
 ## Authentication bypass
 
-### The protection logic implemented in the service's business logic can be bypassed.
+### The protection implemented in the service can be bypassed.
 
 - Login bypass
     1. Query that validates credentials
