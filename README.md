@@ -1,6 +1,8 @@
-<h1 align="center">WikiRisks</h1>
+<img width="100%" height="100%" alt="Wikirisks" src="./resources/Wikirisks.png" />
 
-**WikiRisks** is a repository dedicated to organizing web application vulnerabilities with a strong focus on their risks and impacts. The project aims to assist those in the security field ensure that the vulnerabilities they discover are properly recognized for their significance.
+- - -
+
+**WikiRisks** is a repository dedicated to organizing web application vulnerabilities with a strong focus on their risks and impacts, not on discovery methodologies or root causes. The project aims to assist those in the security field ensure that the vulnerabilities they discover are properly recognized for their significance.
 
 ## Contributing
 
