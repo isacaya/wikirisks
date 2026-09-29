@@ -1,11 +1,11 @@
 # NoSQL Injection
 
 ## Table of Contents
-- [Authentication bypass](#authentication-bypass)
+- [Authentication Bypass](#authentication-bypass)
 - [Data Exfiltration](#data-exfiltration)
 - [Data Tampering](#data-tampering)
 
-## Authentication bypass
+## Authentication Bypass
 
 ### The protection implemented in the service can be bypassed.
 

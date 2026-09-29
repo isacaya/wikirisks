@@ -1,11 +1,11 @@
 # Unrestricted File Upload
 
 ## Table of Contents
-- [Upload a web shell](#upload-a-web-shell)
-- [Upload a file with an HTML extension](#upload-a-file-with-an-html-extension)
-- [Distribute malicious files](#distribute-malicious-files)
+- [Upload a Web Shell](#upload-a-web-shell)
+- [Upload a File with an HTML Extension](#upload-a-file-with-an-html-extension)
+- [Distribute Malicious Files](#distribute-malicious-files)
 
-## Upload a web shell
+## Upload a Web Shell
 
 ### Arbitrary commands can be executed with the web service's execute privileges.[^1]
 
@@ -14,7 +14,7 @@
     <?php system('whoami'); ?>
     ```
 
-## Upload a file with an HTML extension
+## Upload a File with an HTML Extension
 
 ### Attacks such as XSS or phishing can be performed on trusted domains.
 
@@ -39,7 +39,7 @@
     ```
    <img src="./resources/Upload_a_file_with_an_HTML_extension_phishing.png" width="50%" height="50%">
 
-## Distribute malicious files
+## Distribute Malicious Files
 
 ### Malicious files can be distributed by leveraging the domain's reputation.
 

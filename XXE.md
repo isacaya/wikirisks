@@ -1,4 +1,4 @@
-# XXE(XML External Entity Injection)
+# XXE (XML External Entity Injection)
 
 ## Table of Contents
 - [DoS](#dos)

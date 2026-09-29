@@ -1,14 +1,14 @@
 # XSS (Cross-Site Scripting)
 
 ## Table of Contents
-- [Credential stealing](#credential-stealing)
+- [Credential Stealing](#credential-stealing)
 - [Chaining with CSRF](#chaining-with-csrf)
-- [WEB API abusing](#web-api-abusing)
+- [Web API Abusing](#web-api-abusing)
 - [Content Spoofing](#content-spoofing)
 - [Data Exfiltration](#data-exfiltration)
 - [Denial of Service](#denial-of-service)
 
-## Credential stealing
+## Credential Stealing
 
 ### Credentials used for authentication (e.g., cookie, access token) can be stolen.
 
@@ -56,7 +56,7 @@
     </script>
     ```
 
-## WEB API abusing
+## Web API Abusing
 
 ### Web browser-provided APIs can be exploited to access OS features. (e.g., Media Stream API, Clipboard API, etc.).
 

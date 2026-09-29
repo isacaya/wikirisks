@@ -2,7 +2,7 @@
 
 ## Table of Contents
 - [Information Leakage](#information-leakage)
-- [Authentication bypass](#authentication-bypass)
+- [Authentication Bypass](#authentication-bypass)
 - [RCE](#rce)
 
 ## Information Leakage
@@ -73,7 +73,7 @@
         ]
         ```
 
-## Authentication bypass
+## Authentication Bypass
 
 ### The protection implemented in the service can be bypassed.
 

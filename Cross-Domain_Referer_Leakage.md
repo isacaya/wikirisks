@@ -1,9 +1,9 @@
-# Cross Domain referer leakage
+# Cross-Domain Referer Leakage
 
 ## Table of Contents
-- [Cross-domain referer leakage](#cross-domain-referer-leakage)
+- [Cross-Domain Referer Leakage](#cross-domain-referer-leakage)
 
-## Cross-domain referer leakage
+## Cross-Domain Referer Leakage
 
 ### Sensitive information included in the URI may be exposed during cross-domain requests.
 

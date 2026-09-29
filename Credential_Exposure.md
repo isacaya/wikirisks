@@ -1,9 +1,9 @@
-# Credential_Exposure
+# Credential Exposure
 
 ## Table of Contents
-- [Access token exposure](#access-token-exposure)
+- [Access Token Exposure](#access-token-exposure)
 
-## Access token exposure
+## Access Token Exposure
 
 ### Exposed credentials (e.g., access tokens, API keys, etc.) can lead to the compromise of the entire service.
 

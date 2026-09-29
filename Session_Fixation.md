@@ -1,9 +1,9 @@
 # Session Fixation
 
 ## Table of Contents
-- [Session hijacking](#session-hijacking)
+- [Session Hijacking](#session-hijacking)
 
-## Session hijacking
+## Session Hijacking
 
 ### Attackers can hijack a user session through fixed session ID.
 

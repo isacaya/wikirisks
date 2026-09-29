@@ -1,10 +1,10 @@
 # Subdomain Takeover
 
 ## Table of Contents
-- [Bypass browser security mechanisms](#bypass-browser-security-mechanisms)
-- [Phishing with trusted domains](#phishing-with-trusted-domains)
+- [Bypass Browser Security Mechanisms](#bypass-browser-security-mechanisms)
+- [Phishing with Trusted Domains](#phishing-with-trusted-domains)
 
-## Bypass browser security mechanisms
+## Bypass Browser Security Mechanisms
 
 ### A compromised subdomain can be used to bypass the SameSite.
 
@@ -14,6 +14,6 @@
 
 - Hackerone report, [Subdomain Takeover to Authentication bypass](https://hackerone.com/reports/335330)
 
-## Phishing with trusted domains
+## Phishing with Trusted Domains
 
 ### Phishing can be effectively carried out through trusted domain.
