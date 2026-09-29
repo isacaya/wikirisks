@@ -12,12 +12,12 @@
 - Login bypass [^1]
     1. Query that validates credentials
         ```javascript
-        users_collection.findOne({ $where: `this.username == '${username}' && this.username == '${password}'` });
+        users_collection.findOne({ $where: `this.username == '${username}' && this.password == '${password}'` });
         ```
 
     2. Manipulated query
         ```javascript
-        users_collection.findOne({ $where: `this.username == 'admin'||'1'=='123' && this.username == '1'` });
+        users_collection.findOne({ $where: `this.username == 'admin'||'1'=='123' && this.password == '1'` });
         ```
 
 ## Data Exfiltration

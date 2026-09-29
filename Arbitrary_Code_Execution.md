@@ -13,7 +13,7 @@ Due to its nature, code execution inherently encompasses most of the impacts and
 ### It could lead to the service interruption.
 - Deleting critical files
     ```bash
-        rm -rf /app/data/uploads/sensitive_file.txt
+    rm -rf /app/data/uploads/sensitive_file.txt
     ```
 
 - Fork bomb

