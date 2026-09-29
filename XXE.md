@@ -1,10 +1,10 @@
 # XXE(XML External Entity Injection)
 
 ## Table of Contents
-- [DoS](#DoS)
-- [Arbitrary File Read](#Arbitrary-File-Read)
-- [Reconnaisance](#Reconnaisance)
-- [SSRF](#SSRF)
+- [DoS](#dos)
+- [Arbitrary File Read](#arbitrary-file-read)
+- [Reconnaissance](#reconnaissance)
+- [SSRF](#ssrf)
 
 ## DoS
 
@@ -35,7 +35,7 @@
     <foo>&xxe;</foo>
     ```
 
-## Reconnaisance
+## Reconnaissance
 
 ### It can be used for internal network mapping.
 

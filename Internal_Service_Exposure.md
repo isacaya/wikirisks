@@ -1,7 +1,7 @@
 # Internal Service Exposure
 
 ## Table of Contents
-- [Kubernetes API Endpoint exposure](#kubernetes-api-endpoint-exposure)]
+- [Kubernetes API Endpoint exposure](#kubernetes-api-endpoint-exposure)
 
 ## Kubernetes API Endpoint exposure
 
