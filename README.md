@@ -2,11 +2,11 @@
 
 - - -
 
-**WikiRisks** is a repository dedicated to organizing web application vulnerabilities with a strong focus on the risks they inherently carry, not on discovery methodologies or root causes. The project aims to help those in the security field ensure that the vulnerabilities they discover are properly recognized for their significance.
+**WikiRisks** is a repository dedicated to organizing web application vulnerabilities with a strong focus on their risks and impacts, not on discovery methodologies or root causes. The project aims to assist those in the security field ensure that the vulnerabilities they discover are properly recognized for their significance.
 
 ## Table of Contents
 
-Each document is organized by **impact**: the headings describe what an attacker can achieve, followed by concrete cases that apply wherever the vulnerability appears.
+Each document is organized by **impact**: the headings describe what an attacker can achieve, followed by concrete cases that demonstrate it.
 
 | Vulnerability | Impacts |
 | --- | --- |

@@ -58,7 +58,6 @@ If a case needs an image, upload it to the `resources` folder. Name the file by 
 ### Choose the right vulnerability type
 - Add a vulnerability when its impact follows from its technical primitive alone, so that the same cases explain it in any service. For example, SQL Injection lets an attacker read or modify the database wherever it occurs, and XXE lets an attacker read local files no matter what the application does.
 - Vulnerabilities whose impact depends on the business logic or the nature of the affected feature (e.g., IDOR, Host Header Injection, Mass Assignment) are out of scope. What an attacker gains from them varies too much between services to be described with general cases.
-- When in doubt, ask: "Would this case still be accurate if it were copied into a write-up about a completely different service?" If the answer is no, the vulnerability is probably not a good fit.
 
 ### Focus on impact
 - Organize each document by **what an attacker can achieve** (e.g., Account Takeover, Data Exfiltration, RCE), not by how the vulnerability is found or why it occurs.
