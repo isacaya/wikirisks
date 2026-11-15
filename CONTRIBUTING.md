@@ -78,7 +78,6 @@ If a case needs an image, upload it to the `resources` folder. Name the file by 
   - `[ATTACKER-DOMAIN]`: a domain controlled by the attacker
   - `[IDENTITY-PROVIDER]`: an OAuth or SSO provider
   - Other bracketed uppercase names (e.g., `[ATTACKER-CLIENT-ID]`) follow the same pattern.
-- Use `https://` for attacker-controlled URLs.
 
 ### Footnotes and prerequisites
 - When an impact only applies under specific conditions (configuration, privileges, browser behavior), state them in a footnote, such as "Applies when the session cookie is set with `SameSite=None`."
