@@ -1,0 +1,27 @@
+name: Report an error
+description: Report a typographical error, a factual error, a broken link, or an incorrect example.
+title: "[Error] "
+labels: ["bug"]
+body:
+  - type: input
+    id: location
+    attributes:
+      label: Location
+      description: The file and section where the problem is.
+      placeholder: "e.g., SQL_Injection.md, Authentication Bypass"
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong?
+      description: Describe the error and, if possible, why it is incorrect.
+    validations:
+      required: true
+  - type: textarea
+    id: fix
+    attributes:
+      label: Suggested fix
+      description: The corrected text or example, and any source that supports it.
+    validations:
+      required: false
