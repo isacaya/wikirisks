@@ -1,6 +1,7 @@
 # Clickjacking
 
 ## Table of Contents
+
 - [Account Takeover](#account-takeover)
 - [Authorization Grant Hijacking](#authorization-grant-hijacking)
 - [Bypassing Anti-CSRF Protections](#bypassing-anti-csrf-protections)

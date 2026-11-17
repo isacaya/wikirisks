@@ -1,8 +1,9 @@
 # Weak Credential Management
 
 ## Table of Contents
+
 - [Known or Guessable Secrets](#known-or-guessable-secrets)
-- [Weak Encryption of Secrets](#weak-encryption-of-secrets)
+- [Weak Hashing of Secrets](#weak-hashing-of-secrets)
 
 ## Known or Guessable Secrets
 
@@ -16,26 +17,26 @@
     2. Creating a forged JWT
         ```python
         import jwt
-        
+
         secret_key = "secret123" #secret key cracked with hashcat
-        
+
         payload = {
             "sub": "user_123",
             "role": "admin"
         }
-        
+
         token = jwt.encode(payload, secret_key, algorithm="HS256")
         print(f"Generated JWT: {token}")
         ```
-   
+
 - Easily guessable admin credentials
     ```bash
     curl -X POST -d "username=admin&password=admin" https://[VULNERABLE-SERVICE]/login
     ```
 
-## Weak Encryption of Secrets
+## Weak Hashing of Secrets
 
-### Using weak encryption algorithms enables faster decryption, potentially leading to further attacks. (e.g., credential stuffing)
+### Using weak hashing algorithms enables faster cracking, potentially leading to further attacks (e.g., credential stuffing).
 
 - Cracking MD5 or SHA-1 hashed passwords
     ```bash

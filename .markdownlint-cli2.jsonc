@@ -1,0 +1,19 @@
+{
+    // Rules follow the writing guidelines in CONTRIBUTING.md.
+    "config": {
+        "default": true,
+        // Long sentences, table rows and URLs are common in these documents.
+        "MD013": false,
+        // Nested content is indented with four spaces.
+        "MD007": { "indent": 4 },
+        // The `###` description of an impact is a sentence and ends with a period.
+        "MD026": false,
+        // Examples are placed directly under the case they belong to.
+        "MD031": false,
+        // Images are sized with <img>.
+        "MD033": { "allowed_elements": ["img"] },
+        // README.md starts with the banner image.
+        "MD041": false
+    },
+    "globs": ["*.md"]
+}

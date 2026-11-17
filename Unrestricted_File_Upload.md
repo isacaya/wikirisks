@@ -1,13 +1,14 @@
 # Unrestricted File Upload
 
 ## Table of Contents
+
 - [Upload a Web Shell](#upload-a-web-shell)
 - [Upload a File with an HTML Extension](#upload-a-file-with-an-html-extension)
 - [Distribute Malicious Files](#distribute-malicious-files)
 
 ## Upload a Web Shell
 
-### Arbitrary commands can be executed with the web service's execute privileges.[^1]
+### Arbitrary commands can be executed with the web service's execute privileges. [^1]
 
 - Execute system commands
     ```php
@@ -37,13 +38,13 @@
         </body>
     </html>
     ```
-   <img src="./resources/Upload_a_file_with_an_HTML_extension_phishing.png" width="50%" height="50%">
+
+    <img src="./resources/Upload_a_file_with_an_HTML_extension_phishing.png" alt="Fake login page served from the trusted domain" width="50%" height="50%">
 
 ## Distribute Malicious Files
 
 ### Malicious files can be distributed by leveraging the domain's reputation.
 
 - exe, bat, dmg...
-   
 
 [^1]: It is possible only when files with the same extension as the language running on the service can be uploaded, and execute permissions are granted to the file.

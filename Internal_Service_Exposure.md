@@ -1,11 +1,12 @@
 # Internal Service Exposure
 
 ## Table of Contents
-- [Kubernetes API Endpoint Exposure](#kubernetes-api-endpoint-exposure)
 
-## Kubernetes API Endpoint Exposure
+- [RCE](#rce)
+
+## RCE
 
 ### It may lead to arbitrary code execution.
 
-- Kubernetes API Endpoint exposure
-    - Hackerone report, [Exposed Kubernetes API - RCE/Exposed Creds](https://hackerone.com/reports/455645)
+- Kubernetes API endpoint exposure
+    - HackerOne report, [Exposed Kubernetes API - RCE/Exposed Creds](https://hackerone.com/reports/455645)

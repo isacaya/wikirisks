@@ -1,6 +1,7 @@
 # HTTP Request Smuggling
 
 ## Table of Contents
+
 - [Access Control Bypass](#access-control-bypass)
 - [Capturing Other Users' Requests](#capturing-other-users-requests)
 - [Response Queue Poisoning](#response-queue-poisoning)

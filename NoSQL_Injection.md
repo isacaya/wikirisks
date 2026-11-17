@@ -1,6 +1,7 @@
 # NoSQL Injection
 
 ## Table of Contents
+
 - [Authentication Bypass](#authentication-bypass)
 - [Data Exfiltration](#data-exfiltration)
 - [Data Tampering](#data-tampering)
@@ -24,7 +25,7 @@
 
 ### Data from other collections that the developer did not intend to access can be leaked.
 
-- Cross-collection Data Leakage [^1]
+- Cross-collection data leakage [^1]
     1. Query that fetches items with stock information
         ```javascript
         item_collection.aggregate([{ $lookup: JSON.parse(`{"from":"${lookup}","localField":"stockitem","foreignField":"sku","as":"stockitem_info"}`) }])
@@ -39,15 +40,15 @@
 
 ### Attackers can modify or delete unauthorized data.
 
-- Unauthorized Data Modification [^1]
-    1. Query that delete a specific document
+- Unauthorized data modification [^1]
+    1. Query that deletes a specific document
         ```javascript
         docs_collection.deleteOne({ document_id });
         ```
 
     2. Manipulated query
         ```javascript
-         docs_collection.deleteOne({ "$ne":"2" })
+        docs_collection.deleteOne({ "$ne":"2" })
         ```
 
 [^1]: Based on MongoDB

