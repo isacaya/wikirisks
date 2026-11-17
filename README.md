@@ -29,7 +29,7 @@ Each document is organized by **impact**: the headings describe what an attacker
 | [Lack of Rate Limit](./Lack_of_Rate_Limit.md) | Account Takeover, Account Lockout |
 | [NoSQL Injection](./NoSQL_Injection.md) | Authentication Bypass, Data Exfiltration, Data Tampering |
 | [OAuth Misconfiguration](./OAuth_Misconfiguration.md) | Account Takeover, Data Exfiltration |
-| [Open Redirect](./Open_Redirect.md) | Phishing |
+| [Open Redirect](./Open_Redirect.md) | Phishing, Account Takeover, XSS, Chaining with SSRF |
 | [Path Traversal](./Path_Traversal.md) | Information Disclosure, Arbitrary File Modification |
 | [Prototype Pollution](./Prototype_Pollution.md) | RCE, Privilege Escalation, XSS, Denial of Service |
 | [Race Condition](./Race_Condition.md) | Limit Overrun, Authentication Bypass |
