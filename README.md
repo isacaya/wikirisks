@@ -39,7 +39,7 @@ Each document is organized by **impact**: the headings describe what an attacker
 | [LDAP Injection](./LDAP_Injection.md) | Authentication Bypass, Data Exfiltration |
 | [NoSQL Injection](./NoSQL_Injection.md) | Authentication Bypass, Data Exfiltration, Data Tampering |
 | [OAuth Misconfiguration](./OAuth_Misconfiguration.md) | Account Takeover, Data Exfiltration |
-| [Open Redirect](./Open_Redirect.md) | Phishing |
+| [Open Redirect](./Open_Redirect.md) | Phishing, Account Takeover, XSS, Chaining with SSRF |
 | [Path Traversal](./Path_Traversal.md) | Information Disclosure, Arbitrary File Modification |
 | [postMessage Misconfiguration](./postMessage_Misconfiguration.md) | Data Exfiltration, Account Takeover, XSS |
 | [Prototype Pollution](./Prototype_Pollution.md) | RCE, Privilege Escalation, XSS, Denial of Service |
@@ -48,15 +48,15 @@ Each document is organized by **impact**: the headings describe what an attacker
 | [SAML Misconfiguration](./SAML_Misconfiguration.md) | Account Takeover, Privilege Escalation, Chaining with XXE |
 | [Session Fixation](./Session_Fixation.md) | Session Hijacking |
 | [SQL Injection](./SQL_Injection.md) | Data Exfiltration, Authentication Bypass, RCE |
-| [SSRF](./SSRF.md) | Access Control Bypass, Denial of Service |
-| [Subdomain Takeover](./Subdomain_Takeover.md) | Bypass Browser Security Mechanisms, Phishing with Trusted Domains |
+| [SSRF](./SSRF.md) | Access Control Bypass, Denial of Service, RCE |
+| [Subdomain Takeover](./Subdomain_Takeover.md) | Session Hijacking, Account Takeover, Bypass Browser Security Mechanisms, Phishing with Trusted Domains |
 | [Template Injection](./Template_Injection.md) | RCE, Client-Side Protection Bypass |
 | [Unrestricted File Upload](./Unrestricted_File_Upload.md) | Upload a Web Shell, Upload a File with an HTML Extension, Distribute Malicious Files |
 | [Weak Credential Management](./Weak_Credential_Management.md) | Known or Guessable Secrets, Weak Hashing of Secrets |
 | [Web Cache Deception](./Web_Cache_Deception.md) | Data Exfiltration, Account Takeover |
 | [XPath Injection](./XPath_Injection.md) | Authentication Bypass, Data Exfiltration |
 | [XS-Leaks (Cross-Site Leaks)](./XS-Leaks.md) | Information Disclosure, Deanonymization |
-| [XSS (Cross-Site Scripting)](./XSS.md) | Credential Stealing, Performing Actions as the Victim, Web API Abusing, Content Spoofing, Data Exfiltration, Denial of Service |
+| [XSS (Cross-Site Scripting)](./XSS.md) | Credential Stealing, Performing Actions as the Victim, Web API Abusing, Content Spoofing, Data Exfiltration, Denial of Service, Persistent Access |
 | [XXE (XML External Entity Injection)](./XXE.md) | Denial of Service, Arbitrary File Read, Reconnaissance, SSRF |
 | [Zip Slip](./Zip_Slip.md) | RCE, Persistent Access, Denial of Service |
 
