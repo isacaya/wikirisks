@@ -15,6 +15,7 @@ Each document is organized by **impact**: the headings describe what an attacker
 | [Arbitrary Code Execution](./Arbitrary_Code_Execution.md) | Denial of Service, Ransomware Deployment, Cryptojacking |
 | [Cache Poisoning](./Cache_Poisoning.md) | Chaining with Denial of Service, Chaining with XSS |
 | [Clickjacking](./Clickjacking.md) | Account Takeover, Authorization Grant Hijacking, Bypassing Anti-CSRF Protections |
+| [Cookie Misconfiguration](./Cookie_Misconfiguration.md) | Session Hijacking, Session Fixation, Chaining with XSS, Chaining with CSRF |
 | [CORS Misconfiguration](./CORS_Misconfiguration.md) | Data Exfiltration, Bypassing IP-based Authentication |
 | [Credential Exposure](./Credential_Exposure.md) | Access Token Exposure |
 | [CRLF Injection](./CRLF_Injection.md) | XSS, Session Fixation, Chaining with Cache Poisoning |
