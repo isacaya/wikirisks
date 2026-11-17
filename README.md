@@ -15,6 +15,7 @@ Each document is organized by **impact**: the headings describe what an attacker
 | [Arbitrary Code Execution](./Arbitrary_Code_Execution.md) | Denial of Service, Ransomware Deployment, Cryptojacking |
 | [Cache Poisoning](./Cache_Poisoning.md) | Chaining with Denial of Service, Chaining with XSS |
 | [Clickjacking](./Clickjacking.md) | Account Takeover, Authorization Grant Hijacking, Bypassing Anti-CSRF Protections |
+| [Cookie Misconfiguration](./Cookie_Misconfiguration.md) | Session Hijacking, Session Fixation, Chaining with XSS, Chaining with CSRF |
 | [CORS Misconfiguration](./CORS_Misconfiguration.md) | Data Exfiltration, Bypassing IP-based Authentication |
 | [Credential Exposure](./Credential_Exposure.md) | Access Token Exposure |
 | [CRLF Injection](./CRLF_Injection.md) | XSS, Session Fixation, Chaining with Cache Poisoning |
@@ -22,17 +23,29 @@ Each document is organized by **impact**: the headings describe what an attacker
 | [Cross-Site WebSocket Hijacking](./Cross-Site_WebSocket_Hijacking.md) | Data Exfiltration, Account Takeover, Data Tampering |
 | [CSRF (Cross-Site Request Forgery)](./CSRF.md) | Account Takeover, Privilege Escalation, Financial Loss, Data Tampering, Chaining with XSS, Login CSRF |
 | [CSS Injection](./CSS_Injection.md) | Data Exfiltration, UI Redressing (Phishing) |
+| [CSV Injection](./CSV_Injection.md) | Data Exfiltration, Command Execution on the Victim's Machine |
+| [Dependency Confusion](./Dependency_Confusion.md) | RCE, Credential Stealing, XSS |
+| [DNS Rebinding](./DNS_Rebinding.md) | Bypassing IP-based Authentication, Chaining with SSRF |
+| [DOM Clobbering](./DOM_Clobbering.md) | XSS, Client-Side Protection Bypass |
 | [Error Message Exposure](./Error_Message_Exposure.md) | Sensitive Data in Error Messages |
+| [File Inclusion](./File_Inclusion.md) | RCE, Information Disclosure, Chaining with Unrestricted File Upload |
+| [GraphQL Misconfiguration](./GraphQL_Misconfiguration.md) | Account Takeover, Denial of Service, Information Disclosure |
+| [HTML Injection](./HTML_Injection.md) | Data Exfiltration, Credential Stealing, Phishing |
 | [HTTP Request Smuggling](./HTTP_Request_Smuggling.md) | Access Control Bypass, Capturing Other Users' Requests, Response Queue Poisoning, Chaining with Cache Poisoning, Chaining with XSS |
 | [Insecure Deserialization](./Insecure_Deserialization.md) | RCE, Denial of Service, Object Injection |
 | [Internal Service Exposure](./Internal_Service_Exposure.md) | RCE |
+| [JWT Misconfiguration](./JWT_Misconfiguration.md) | Account Takeover, Privilege Escalation, Persistent Access |
 | [Lack of Rate Limit](./Lack_of_Rate_Limit.md) | Account Takeover, Account Lockout |
+| [LDAP Injection](./LDAP_Injection.md) | Authentication Bypass, Data Exfiltration |
 | [NoSQL Injection](./NoSQL_Injection.md) | Authentication Bypass, Data Exfiltration, Data Tampering |
 | [OAuth Misconfiguration](./OAuth_Misconfiguration.md) | Account Takeover, Data Exfiltration |
 | [Open Redirect](./Open_Redirect.md) | Phishing |
 | [Path Traversal](./Path_Traversal.md) | Information Disclosure, Arbitrary File Modification |
+| [postMessage Misconfiguration](./postMessage_Misconfiguration.md) | Data Exfiltration, Account Takeover, XSS |
 | [Prototype Pollution](./Prototype_Pollution.md) | RCE, Privilege Escalation, XSS, Denial of Service |
 | [Race Condition](./Race_Condition.md) | Limit Overrun, Authentication Bypass |
+| [ReDoS (Regular Expression Denial of Service)](./ReDoS.md) | Denial of Service |
+| [SAML Misconfiguration](./SAML_Misconfiguration.md) | Account Takeover, Privilege Escalation, Chaining with XXE |
 | [Session Fixation](./Session_Fixation.md) | Session Hijacking |
 | [SQL Injection](./SQL_Injection.md) | Data Exfiltration, Authentication Bypass, RCE |
 | [SSRF](./SSRF.md) | Access Control Bypass, Denial of Service |
@@ -40,6 +53,9 @@ Each document is organized by **impact**: the headings describe what an attacker
 | [Template Injection](./Template_Injection.md) | RCE, Client-Side Protection Bypass |
 | [Unrestricted File Upload](./Unrestricted_File_Upload.md) | Upload a Web Shell, Upload a File with an HTML Extension, Distribute Malicious Files |
 | [Weak Credential Management](./Weak_Credential_Management.md) | Known or Guessable Secrets, Weak Hashing of Secrets |
+| [Web Cache Deception](./Web_Cache_Deception.md) | Data Exfiltration, Account Takeover |
+| [XPath Injection](./XPath_Injection.md) | Authentication Bypass, Data Exfiltration |
+| [XS-Leaks (Cross-Site Leaks)](./XS-Leaks.md) | Information Disclosure, Deanonymization |
 | [XSS (Cross-Site Scripting)](./XSS.md) | Credential Stealing, Performing Actions as the Victim, Web API Abusing, Content Spoofing, Data Exfiltration, Denial of Service |
 | [XXE (XML External Entity Injection)](./XXE.md) | Denial of Service, Arbitrary File Read, Reconnaissance, SSRF |
 | [Zip Slip](./Zip_Slip.md) | RCE, Persistent Access, Denial of Service |
