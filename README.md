@@ -26,6 +26,7 @@ Each document is organized by **impact**: the headings describe what an attacker
 | [HTTP Request Smuggling](./HTTP_Request_Smuggling.md) | Access Control Bypass, Capturing Other Users' Requests, Response Queue Poisoning, Chaining with Cache Poisoning, Chaining with XSS |
 | [Insecure Deserialization](./Insecure_Deserialization.md) | RCE, Denial of Service, Object Injection |
 | [Internal Service Exposure](./Internal_Service_Exposure.md) | RCE |
+| [JWT Misconfiguration](./JWT_Misconfiguration.md) | Account Takeover, Privilege Escalation, Persistent Access |
 | [Lack of Rate Limit](./Lack_of_Rate_Limit.md) | Account Takeover, Account Lockout |
 | [NoSQL Injection](./NoSQL_Injection.md) | Authentication Bypass, Data Exfiltration, Data Tampering |
 | [OAuth Misconfiguration](./OAuth_Misconfiguration.md) | Account Takeover, Data Exfiltration |
