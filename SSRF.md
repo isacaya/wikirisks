@@ -4,6 +4,7 @@
 
 - [Access Control Bypass](#access-control-bypass)
 - [Denial of Service](#denial-of-service)
+- [RCE](#rce)
 
 ## Access Control Bypass
 
@@ -33,4 +34,12 @@
     curl https://[VULNERABLE-SERVICE]/translate?url=http://127.0.0.1:8888/poweroff
     ```
 
-[^1]: Based on IMDSv1 (AWS)
+## RCE
+
+### Credentials obtained from internal endpoints can give control over the infrastructure that runs the service.
+
+- Escalating from the metadata service to the instances
+    - The metadata service exposes credentials and bootstrap configuration for the instance, as in the [Access Control Bypass](#access-control-bypass) case. Used outside the server, they can grant access to the cloud account or the cluster that runs the service, where commands can be run on its instances.
+    - HackerOne report, [SSRF in Exchange leads to ROOT access in all instances](https://hackerone.com/reports/341876)
+
+[^1]: Based on IMDSv1 (AWS).
