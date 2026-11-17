@@ -27,6 +27,7 @@ Each document is organized by **impact**: the headings describe what an attacker
 | [Insecure Deserialization](./Insecure_Deserialization.md) | RCE, Denial of Service, Object Injection |
 | [Internal Service Exposure](./Internal_Service_Exposure.md) | RCE |
 | [Lack of Rate Limit](./Lack_of_Rate_Limit.md) | Account Takeover, Account Lockout |
+| [LDAP Injection](./LDAP_Injection.md) | Authentication Bypass, Data Exfiltration |
 | [NoSQL Injection](./NoSQL_Injection.md) | Authentication Bypass, Data Exfiltration, Data Tampering |
 | [OAuth Misconfiguration](./OAuth_Misconfiguration.md) | Account Takeover, Data Exfiltration |
 | [Open Redirect](./Open_Redirect.md) | Phishing |
