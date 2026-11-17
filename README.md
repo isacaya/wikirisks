@@ -33,6 +33,7 @@ Each document is organized by **impact**: the headings describe what an attacker
 | [Path Traversal](./Path_Traversal.md) | Information Disclosure, Arbitrary File Modification |
 | [Prototype Pollution](./Prototype_Pollution.md) | RCE, Privilege Escalation, XSS, Denial of Service |
 | [Race Condition](./Race_Condition.md) | Limit Overrun, Authentication Bypass |
+| [SAML Misconfiguration](./SAML_Misconfiguration.md) | Account Takeover, Privilege Escalation, Chaining with XXE |
 | [Session Fixation](./Session_Fixation.md) | Session Hijacking |
 | [SQL Injection](./SQL_Injection.md) | Data Exfiltration, Authentication Bypass, RCE |
 | [SSRF](./SSRF.md) | Access Control Bypass, Denial of Service |
