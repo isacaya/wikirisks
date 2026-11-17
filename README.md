@@ -23,6 +23,7 @@ Each document is organized by **impact**: the headings describe what an attacker
 | [CSRF (Cross-Site Request Forgery)](./CSRF.md) | Account Takeover, Privilege Escalation, Financial Loss, Data Tampering, Chaining with XSS, Login CSRF |
 | [CSS Injection](./CSS_Injection.md) | Data Exfiltration, UI Redressing (Phishing) |
 | [Error Message Exposure](./Error_Message_Exposure.md) | Sensitive Data in Error Messages |
+| [HTML Injection](./HTML_Injection.md) | Data Exfiltration, Credential Stealing, Phishing |
 | [HTTP Request Smuggling](./HTTP_Request_Smuggling.md) | Access Control Bypass, Capturing Other Users' Requests, Response Queue Poisoning, Chaining with Cache Poisoning, Chaining with XSS |
 | [Insecure Deserialization](./Insecure_Deserialization.md) | RCE, Denial of Service, Object Injection |
 | [Internal Service Exposure](./Internal_Service_Exposure.md) | RCE |
