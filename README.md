@@ -19,7 +19,7 @@ Each document is organized by **impact**: the headings describe what an attacker
 | [CORS Misconfiguration](./CORS_Misconfiguration.md) | Data Exfiltration, Bypassing IP-based Authentication |
 | [Credential Exposure](./Credential_Exposure.md) | Access Token Exposure |
 | [CRLF Injection](./CRLF_Injection.md) | XSS, Session Fixation, Chaining with Cache Poisoning |
-| [Cross-Domain Referer Leakage](./Cross-Domain_Referer_Leakage.md) | Cross-Domain Referer Leakage |
+| [Cross-Domain Referer Leakage](./Cross-Domain_Referer_Leakage.md) | Information Disclosure |
 | [Cross-Site WebSocket Hijacking](./Cross-Site_WebSocket_Hijacking.md) | Data Exfiltration, Account Takeover, Data Tampering |
 | [CSRF (Cross-Site Request Forgery)](./CSRF.md) | Account Takeover, Privilege Escalation, Financial Loss, Data Tampering, Chaining with XSS, Login CSRF |
 | [CSS Injection](./CSS_Injection.md) | Data Exfiltration, UI Redressing (Phishing) |

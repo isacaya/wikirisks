@@ -2,9 +2,9 @@
 
 ## Table of Contents
 
-- [Cross-Domain Referer Leakage](#cross-domain-referer-leakage)
+- [Information Disclosure](#information-disclosure)
 
-## Cross-Domain Referer Leakage
+## Information Disclosure
 
 ### Sensitive information included in the URI may be exposed during cross-domain requests.
 
