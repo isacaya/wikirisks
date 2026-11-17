@@ -36,7 +36,7 @@ Each document is organized by **impact**: the headings describe what an attacker
 | [Session Fixation](./Session_Fixation.md) | Session Hijacking |
 | [SQL Injection](./SQL_Injection.md) | Data Exfiltration, Authentication Bypass, RCE |
 | [SSRF](./SSRF.md) | Access Control Bypass, Denial of Service |
-| [Subdomain Takeover](./Subdomain_Takeover.md) | Bypass Browser Security Mechanisms, Phishing with Trusted Domains |
+| [Subdomain Takeover](./Subdomain_Takeover.md) | Session Hijacking, Account Takeover, Bypass Browser Security Mechanisms, Phishing with Trusted Domains |
 | [Template Injection](./Template_Injection.md) | RCE, Client-Side Protection Bypass |
 | [Unrestricted File Upload](./Unrestricted_File_Upload.md) | Upload a Web Shell, Upload a File with an HTML Extension, Distribute Malicious Files |
 | [Weak Credential Management](./Weak_Credential_Management.md) | Known or Guessable Secrets, Weak Hashing of Secrets |
