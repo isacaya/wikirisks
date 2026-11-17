@@ -31,6 +31,7 @@ Each document is organized by **impact**: the headings describe what an attacker
 | [OAuth Misconfiguration](./OAuth_Misconfiguration.md) | Account Takeover, Data Exfiltration |
 | [Open Redirect](./Open_Redirect.md) | Phishing |
 | [Path Traversal](./Path_Traversal.md) | Information Disclosure, Arbitrary File Modification |
+| [postMessage Misconfiguration](./postMessage_Misconfiguration.md) | Data Exfiltration, Account Takeover, XSS |
 | [Prototype Pollution](./Prototype_Pollution.md) | RCE, Privilege Escalation, XSS, Denial of Service |
 | [Race Condition](./Race_Condition.md) | Limit Overrun, Authentication Bypass |
 | [Session Fixation](./Session_Fixation.md) | Session Hijacking |
