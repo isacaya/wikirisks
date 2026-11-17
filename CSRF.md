@@ -1,6 +1,7 @@
 # CSRF (Cross-Site Request Forgery)
 
 ## Table of Contents
+
 - [Account Takeover](#account-takeover)
 - [Privilege Escalation](#privilege-escalation)
 - [Financial Loss](#financial-loss)
@@ -10,9 +11,9 @@
 
 ## Account Takeover
 
-### An attacker can take over the account by redirecting the recovery path to a resource they control.
+### An attacker can take over the account by redirecting the recovery path to a resource they control. [^1]
 
-- Changing the victim's email address [^1]
+- Changing the victim's email address [^2]
     ```html
     <form action="https://[VULNERABLE-SERVICE]/account/email" method="POST">
         <input type="hidden" name="email" value="attacker@[ATTACKER-DOMAIN]">
@@ -35,7 +36,7 @@
 
 ## Privilege Escalation
 
-### A forged request is executed with the permissions of the user who triggers it.
+### A forged request is executed with the permissions of the user who triggers it. [^1]
 
 - Granting the attacker an administrative role
     ```html
@@ -51,7 +52,7 @@
 
 ## Financial Loss
 
-### Transactions can be carried out with the victim's stored funds or payment methods.
+### Transactions can be carried out with the victim's stored funds or payment methods. [^1]
 
 - Making a transfer
     ```html
@@ -66,7 +67,7 @@
 
 ## Data Tampering
 
-### The victim's data can be modified or destroyed without their interaction.
+### The victim's data can be modified or destroyed without their interaction. [^1]
 
 - Deleting the victim's resources
     ```html
@@ -79,7 +80,7 @@
 
 ## Chaining with XSS
 
-### Self-targeted XSS may escalate into an issue that affects other users, because the payload is stored on the victim's own account.
+### Self-targeted XSS may escalate into an issue that affects other users, because the payload is stored on the victim's own account. [^1]
 
 - Storing an XSS payload in the victim's profile
     ```html
@@ -107,4 +108,5 @@
     ```
     Search history, uploaded files, and any payment method the victim registers afterwards remain accessible to the attacker.
 
-[^1]: Applies when the endpoint does not require the current password or a re-authentication step.
+[^1]: Applies when the session cookie is set with `SameSite=None`. Under the `SameSite=Lax` default, cookies are not attached to cross-site `POST` requests, so the forged request is not authenticated. A page on the service's own site, such as a subdomain the attacker controls, is not subject to that restriction.
+[^2]: Applies when the endpoint does not require the current password or a re-authentication step.

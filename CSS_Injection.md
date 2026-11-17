@@ -1,6 +1,7 @@
 # CSS Injection
 
 ## Table of Contents
+
 - [Data Exfiltration](#data-exfiltration)
 - [UI Redressing (Phishing)](#ui-redressing-phishing)
 

@@ -1,6 +1,7 @@
 # Cross-Site WebSocket Hijacking
 
 ## Table of Contents
+
 - [Data Exfiltration](#data-exfiltration)
 - [Account Takeover](#account-takeover)
 - [Data Tampering](#data-tampering)

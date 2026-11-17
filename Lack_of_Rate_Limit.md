@@ -1,6 +1,7 @@
 # Lack of Rate Limit
 
 ## Table of Contents
+
 - [Account Takeover](#account-takeover)
 - [Account Lockout](#account-lockout)
 

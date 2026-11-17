@@ -1,13 +1,16 @@
 # Session Fixation
 
 ## Table of Contents
+
 - [Session Hijacking](#session-hijacking)
 
 ## Session Hijacking
 
-### Attackers can hijack a user session through fixed session ID.
+### Attackers can hijack a user session through a fixed session ID. [^1]
 
 - Session hijacking on a shared computer
     1. An attacker logs into a vulnerable service on a public computer (e.g., in a library), captures the session information, and then logs out.
     2. Later, a victim uses the same public computer to log into the vulnerable service.
-    3. The attacker then uses the session information recorded earlier to hijack the victim’s session.
+    3. The attacker then uses the session information recorded earlier to hijack the victim's session.
+
+[^1]: Applies when the session identifier is not regenerated on authentication.

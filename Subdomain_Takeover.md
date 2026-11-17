@@ -1,6 +1,7 @@
 # Subdomain Takeover
 
 ## Table of Contents
+
 - [Bypass Browser Security Mechanisms](#bypass-browser-security-mechanisms)
 - [Phishing with Trusted Domains](#phishing-with-trusted-domains)
 
@@ -12,7 +13,7 @@
 
 ### Data leakage can occur even with relatively secure CORS configurations.
 
-- Hackerone report, [Subdomain Takeover to Authentication bypass](https://hackerone.com/reports/335330)
+- HackerOne report, [Subdomain Takeover to Authentication bypass](https://hackerone.com/reports/335330)
 
 ## Phishing with Trusted Domains
 
