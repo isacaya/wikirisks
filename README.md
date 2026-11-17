@@ -40,6 +40,7 @@ Each document is organized by **impact**: the headings describe what an attacker
 | [Template Injection](./Template_Injection.md) | RCE, Client-Side Protection Bypass |
 | [Unrestricted File Upload](./Unrestricted_File_Upload.md) | Upload a Web Shell, Upload a File with an HTML Extension, Distribute Malicious Files |
 | [Weak Credential Management](./Weak_Credential_Management.md) | Known or Guessable Secrets, Weak Hashing of Secrets |
+| [XPath Injection](./XPath_Injection.md) | Authentication Bypass, Data Exfiltration |
 | [XSS (Cross-Site Scripting)](./XSS.md) | Credential Stealing, Performing Actions as the Victim, Web API Abusing, Content Spoofing, Data Exfiltration, Denial of Service |
 | [XXE (XML External Entity Injection)](./XXE.md) | Denial of Service, Arbitrary File Read, Reconnaissance, SSRF |
 | [Zip Slip](./Zip_Slip.md) | RCE, Persistent Access, Denial of Service |
