@@ -22,6 +22,7 @@ Each document is organized by **impact**: the headings describe what an attacker
 | [Cross-Site WebSocket Hijacking](./Cross-Site_WebSocket_Hijacking.md) | Data Exfiltration, Account Takeover, Data Tampering |
 | [CSRF (Cross-Site Request Forgery)](./CSRF.md) | Account Takeover, Privilege Escalation, Financial Loss, Data Tampering, Chaining with XSS, Login CSRF |
 | [CSS Injection](./CSS_Injection.md) | Data Exfiltration, UI Redressing (Phishing) |
+| [Dependency Confusion](./Dependency_Confusion.md) | RCE, Credential Stealing, XSS |
 | [Error Message Exposure](./Error_Message_Exposure.md) | Sensitive Data in Error Messages |
 | [HTTP Request Smuggling](./HTTP_Request_Smuggling.md) | Access Control Bypass, Capturing Other Users' Requests, Response Queue Poisoning, Chaining with Cache Poisoning, Chaining with XSS |
 | [Insecure Deserialization](./Insecure_Deserialization.md) | RCE, Denial of Service, Object Injection |
